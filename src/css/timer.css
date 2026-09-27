@@ -1,0 +1,64 @@
+.timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+
+  margin: 0 auto;
+
+  width: 346px;
+  height: 72px;
+}
+
+.timer-container {
+  padding-top: 100px;
+}
+
+.timer .value {
+  font-weight: 400;
+  font-size: 40px;
+
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.timer .label {
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+.timer-container button {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background: #cfcfcf;
+}
+
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  box-sizing: border-box;
+}
+
+.timer-controls-wrapper {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+  margin: 0 auto 32px;
+}
