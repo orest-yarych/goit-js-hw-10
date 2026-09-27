@@ -69,7 +69,7 @@ const options = {
   onClose(selectedDates) {
     userSelectedDate = selectedDates[0];
     currentDate = new Date();
-    if (userSelectedDate < currentDate) {
+    if (userSelectedDate <= currentDate) {
       showErrorMessage();
       refs.startBtn.disabled = true;
       return;
@@ -82,16 +82,12 @@ const options = {
 
 flatpickr('#datetime-picker', options);
 
+refs.startBtn.disabled = true;
 refs.startBtn.addEventListener('click', onStartBtnClick);
 
 function disableContols() {
   refs.startBtn.disabled = true;
   refs.datetimePicker.disabled = true;
-}
-
-function enableContols() {
-  refs.startBtn.disabled = false;
-  refs.datetimePicker.disabled = false;
 }
 
 function onStartBtnClick() {
@@ -103,7 +99,7 @@ function onStartBtnClick() {
       updateTimer(diff);
     } else {
       clearInterval(timerCounterId);
-      enableContols();
+      refs.datetimePicker.disabled = false;
     }
   }, 1000);
 }
